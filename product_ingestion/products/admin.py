@@ -1,14 +1,25 @@
 from django.contrib import admin
 from .models import Product
 
-# Register your models here.
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ['sku', 'name', 'category', 'price', 'stock_quality', 'status']
+    list_display = ['sku', 'name', 'category', 'price', 'stock_qty', 'status']
     list_filter = ['category', 'status']
-    search_fields = ['sku', 'name']
-    list_per_page = 10
-    list_editable = ['status']
+    search_fields = ['sku', 'name', 'category']
+    list_per_page = 25
+    list_editable = ['status', 'stock_qty']
     list_display_links = ['sku', 'name']
     list_max_show_all = 100
-    list_per_page = 100
+    ordering = ['sku']
+    
+    fieldsets = (
+        ('Basic Information', {
+            'fields': ('sku', 'name', 'category')
+        }),
+        ('Pricing & Inventory', {
+            'fields': ('price', 'stock_qty')
+        }),
+        ('Status', {
+            'fields': ('status',)
+        }),
+    )
