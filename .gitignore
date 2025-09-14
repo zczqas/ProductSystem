@@ -1,0 +1,40 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Django stuff
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+db.sqlite3
+media/
+staticfiles/
+static/
+
+# VSCode / IDE
+.vscode/
+.idea/
+
+# Environment variables
+.env
+*.env
+
+# Migrations (optional: sometimes you keep them, sometimes not)
+# Uncomment below if you don’t want to commit migrations at the start
+# */migrations/
+# !*/migrations/__init__.py
+
+# Byte-compiled / packaging
+*.egg-info/
+.eggs/
+dist/
+build/
