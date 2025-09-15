@@ -106,9 +106,9 @@ The application will be available at `http://127.0.0.1:8000/`
 **Example CSV Format**:
 ```csv
 sku,name,category,price,stock_qty,status
-PROD001,Wireless Headphones,Electronics,99.99,50,active
-PROD002,Coffee Mug,Kitchen,15.50,100,active
-PROD003,Notebook,Stationery,5.99,200,inactive
+SKU0001,Product,1,Clothing,232.54,189,inactive
+SKU0002,Product,2,Electronics,337.42,60,active
+SKU0003,Product,3,Home,416.91,104,inactive
 ```
 
 ### REST API Endpoints
